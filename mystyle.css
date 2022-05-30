@@ -1,0 +1,58 @@
+h1{
+  text-align:center;
+  line-height:150%;
+  color: white;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background-image: url("wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-weight: 700;
+}
+
+form {
+  border: 2px solid #f5fffa;
+  width: 400px;
+  height: auto;
+  position: absolute;
+  left: 31%;
+  background-color: white;
+  border-radius: 15px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 4px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #008B8B;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.containerMiddle, label {
+  color: #008B8B;
+  padding: 7px;
+  padding-top: 10px;
+  align: center;
+}
+
+a{
+  color: #008B8B ;
+  font-weight: 900;
+  text-align: center;
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mariam Login Web Page</title>
+<link rel="stylesheet" href="mystyle.css">
+<script type="text/javascript">
+//validate the form rules
+function validateForm() {
+    //getting information entered by user in the forms
+    //into variables
+    var a = document.forms["form"]["email"].value;
+    var b = document.forms["form"]["password"].value;
+
+    //validation if any of the fields are empty
+    if (a == null || a == "", b == null || b == "") {
+      //check that confirm email not empty
+      if (a == null || a == "")
+        alert("Please fill email");
+      //check that password not empty
+      if (b == null || b == "")
+        alert("Please fill password");
+      return false;
+    }
+
+    //check that user email is in a valid format
+    var emailValid = /^([a-zA-Z0-9\._-]+)@([a-zA-Z0-9]+).([a-z]+)(.[a-z]+)?$/
+    if(!emailValid.test(a))
+    {
+       alert("You have entered an invalid email address!");
+       return false;
+    }
+    return true;
+  }
+</script>
+
+</head>
+<body>
+
+   <div class="container">
+    <div class="header">
+    <h1>Welcome Back!</h1>
+    </div>
+
+    <form name="form" action="search_reserve.php" method="post" onsubmit="return validateForm()"><!--showdata-signin.php-->
+
+<div class="containerMiddle">
+     <label for="email">Email: </label><br><br>
+     <input type="text" id="email" name="email"><br><br>
+
+     <label for="password">Password: </label><br><br>
+     <input type="password" id="password" name="password"><br><br>
+</div>
+<div class="container">
+     <button type="submit" name="button"formaction="search_reserve.php">LOGIN</button><br><br>
+    <button type="submit" name="button" formaction="adminoptions.php">CLICK HERE IF ADMIN</button><br><br>
+</div>
+     <div><a href="signup.php" target="_blank" title="Login page" class="linksInPage">New user?
+     CLICK HERE</a>
+ 			</div>
+
+    </form>
+</div>
+</BODY>
+</html>
